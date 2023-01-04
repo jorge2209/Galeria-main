@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+}
+
+.galeria{
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.columnas{
+    flex: 25%;
+    padding: 5px;
+}
+
+.columnas img{
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.columnas img:hover{
+    transform: scale(1.2);
+}
+
+.full-img{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.full-img img{
+    width: 90%;
+    max-width: 600px;
+}
+
+.full-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#anterior-imagen{
+    background-color: transparent;
+    position: absolute;
+    width: 50px;
+    height: 55px;
+    background-repeat: no-repeat; 
+    background-image: url(flechas/izq.png);
+    background-position: 0px 0px;
+    z-index: 3;
+    cursor: pointer;
+    background-size: cover;
+    border: none;
+    margin: 0px;
+    left: 10px;
+    top: 291px;
+}
+
+#siguiente-imagen{
+    background-color: transparent;
+    position: absolute;
+    width: 50px;
+    height: 55px;
+    background-repeat: no-repeat; 
+    background-image: url(flechas/der.png);
+    background-position: 0px 0px;
+    z-index: 3;
+    cursor: pointer;
+    background-size: cover;
+    border: none;
+    margin: 0px;
+    left: 1250px;
+    top: 291px;
+}
+
+@media (max-width:800px){
+    .columnas{
+        flex: 50%;
+    }
+}
+
+@media (max-width:600px){
+    .columnas{
+        flex: 100%;
+    }
+}
